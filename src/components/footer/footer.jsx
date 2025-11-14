@@ -118,6 +118,21 @@ const Footer = () => {
               </div>
           </form>
         </div>
+
+        {/* Developed by DevsUnit - Center Aligned */}
+        <div className="mt-12 pt-8 border-t border-white/20">
+          <p className="text-white text-center text-sm md:text-base">
+            Developed by{' '}
+            <a
+              href="https://www.devsunit.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:opacity-80 transition-opacity duration-200 underline decoration-2 underline-offset-2"
+            >
+              DevsUnit
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   )
