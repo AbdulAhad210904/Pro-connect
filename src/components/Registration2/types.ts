@@ -96,5 +96,5 @@ export interface InputFieldProps {
 
 export interface SearchBarProps {
   placeholder: string;
-  onSearch: (value: string) => void;
+  onSearch?: (value: string) => void; // Made optional as it's not always used
 }

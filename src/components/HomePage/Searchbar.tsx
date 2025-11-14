@@ -8,7 +8,6 @@ interface Props extends SearchBarProps {
 
 export const SearchBar: React.FC<Props> = ({
   placeholder,
-  onSearch,
   isLoggedIn,
 }) => {
   const [searchQuery, setSearchQuery] = React.useState("");

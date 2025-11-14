@@ -32,22 +32,22 @@ export default function RootLayout({ children }) {
   const pathname = usePathname(); // Get current route
 
   useEffect(() => {
-    const handleTokenChange = async () => {
-      const existingToken = Cookies.get("token"); // Check if a token exists first
-      if (!existingToken) return; // Stop execution if no token
-    
-      try {
-        const { data } = await axiosInstance.post(`/api/users/getnewtoken`);
-        const token = data.token;
-        Cookies.set("token", token, { expires: 7 });
-        localStorage.setItem("token", token);
-        document.dispatchEvent(new Event("authChange"));
-      } catch (error) {
-        console.error("Failed to refresh token:", error);
-        Cookies.remove("token"); // Ensure no invalid token remains
-        localStorage.removeItem("token");
-      }
-    };    
+    // const handleTokenChange = async () => {
+    //   const existingToken = Cookies.get("token"); // Check if a token exists first
+    //   if (!existingToken) return; // Stop execution if no token
+    // 
+    //   try {
+    //     const { data } = await axiosInstance.post(`/api/users/getnewtoken`);
+    //     const token = data.token;
+    //     Cookies.set("token", token, { expires: 7 });
+    //     localStorage.setItem("token", token);
+    //     document.dispatchEvent(new Event("authChange"));
+    //   } catch (error) {
+    //     console.error("Failed to refresh token:", error);
+    //     Cookies.remove("token"); // Ensure no invalid token remains
+    //     localStorage.removeItem("token");
+    //   }
+    // };    
     // handleTokenChange();
     const handleAuthChange = () => {
       const token = Cookies.get("token");
@@ -157,7 +157,6 @@ export default function RootLayout({ children }) {
                   firstName={firstName}
                   profilePicture={profilePicture}
                   userType={userType}
-                  planName={planName}
                 />
               ) : (
                 <Header1 />

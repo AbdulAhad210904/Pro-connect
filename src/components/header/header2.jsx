@@ -26,7 +26,7 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 
-const Header2 = ({ firstName, profilePicture, userType, planName }) => {
+const Header2 = ({ firstName, profilePicture, userType }) => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuItems = [

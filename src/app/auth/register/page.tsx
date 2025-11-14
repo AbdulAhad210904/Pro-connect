@@ -52,7 +52,7 @@ export default function RegisterForm() {
   >([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const documentInputRef = useRef<HTMLInputElement>(null);
-  const certificatesInputRef = useRef<HTMLInputElement>(null);
+  // const certificatesInputRef = useRef<HTMLInputElement>(null); // Commented out - certificates upload section is disabled
   const [userType, setUserType] = useState("craftsman");
   const [projectInterest, setProjectInterest] = useState<string[]>([]);
   const [otherProjectInterest, setOtherProjectInterest] = useState("");
@@ -191,12 +191,12 @@ export default function RegisterForm() {
     }
   };
 
-  const handleCertificatesChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files) {
-      setProfessionalCertificates(Array.from(files));
-    }
-  };
+  // const handleCertificatesChange = (event: ChangeEvent<HTMLInputElement>) => {
+  //   const files = event.target.files;
+  //   if (files) {
+  //     setProfessionalCertificates(Array.from(files));
+  //   }
+  // }; // Commented out - certificates upload section is disabled
 
   const handleDragOver = (event: React.DragEvent) => {
     event.preventDefault();
