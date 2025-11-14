@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --scrollbar-color: #00A6E6;
+  --scrollbar-width: 8px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FEFEFE;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Generic class for scrollbar */
+.scrollbar-custom {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--scrollbar-color) transparent; /* For Firefox */
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html {
+  @apply scrollbar-custom;
+}
+/* Default pagination bullet styling */
+.swiper-pagination-bullet {
+  width: 20px !important;
+  border-radius: 20% !important;
+  background: #27aae2 !important;
+}
+
+/* Active pagination bullet styling */
+.swiper-pagination-bullet-active {
+  width: 40px !important;
+  border-radius: 20% !important;
+}

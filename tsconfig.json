@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/testimonials.jsx","src/components/**/*", "src/app/profile/chat/page.tsx", "src/app/community/general/page.jsx", "src/app/feedback/page.jsx", "src/app/community/features/page.jsx", "src/app/community/news/page.jsx", "src/app/profile/page.jsx", "src/app/community/bugs/page.jsx"],
+
+  "exclude": ["node_modules"]
+}
