@@ -213,7 +213,7 @@ export const checkEmailVerificationStatusService = async () => {
 export const sendPasswordUpdateVerificationCodeToEmail = async (email) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/users/sendpasswordcode",
+      "https://api.fastnfresh.app/proconnect/api/users/sendpasswordcode",
       { email }
     );
     console.log("sdfsdfdss");
@@ -238,7 +238,7 @@ export const sendPasswordUpdateVerificationCodeToEmail = async (email) => {
 export const updatePasswordWithCodeService = async (email, verificationCode, newPassword) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/users/updatePasswordWithCode",
+      "https://api.fastnfresh.app/proconnect/api/users/updatePasswordWithCode",
       { email, verificationCode, newPassword }
     );
 

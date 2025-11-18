@@ -306,7 +306,7 @@ export default function RegisterForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/users/register",
+        "https://api.fastnfresh.app/proconnect/api/users/register",
         submitData,
         {
           headers: {
