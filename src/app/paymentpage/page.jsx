@@ -88,7 +88,7 @@ const PaymentPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/create-payment", {
+      const response = await fetch("https://api.fastnfresh.app/proconnect/api/create-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -114,13 +114,13 @@ const PaymentPage = () => {
   };
   const checkExistingSubscription = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/payments/user/${userId}`);
+      const response = await fetch(`https://api.fastnfresh.app/proconnect/api/payments/user/${userId}`);
       if (response.ok) {
         const data = await response.json();
         if (data.payments && data.payments.length > 0) {
           const latestPayment = data.payments[0];
           console.log("latestPayment:", latestPayment);
-          const res2 = await fetch(`http://localhost:8000/api/payments/${latestPayment.customId}`);
+          const res2 = await fetch(`https://api.fastnfresh.app/proconnect/api/payments/${latestPayment.customId}`);
           if (res2.ok) {
             const data2 = await res2.json();
             const currentDate = new Date();
