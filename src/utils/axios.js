@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-export const baseDomain = "http://localhost:8000/";
+export const baseDomain = "https://api.fastnfresh.app/proconnect/";
 
 export const axiosInstance = axios.create({
   baseURL: baseDomain,
